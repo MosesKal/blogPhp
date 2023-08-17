@@ -1,4 +1,4 @@
-<nav class="ligth-green">
+<nav class="light-blue">
     <div class="container">
         <div class="nav-wrapper">
             <a href="index.php?page=home" class="brand-logo">Blog 2.0</a>
