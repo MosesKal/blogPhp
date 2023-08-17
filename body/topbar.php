@@ -6,6 +6,7 @@
                 <li class="<?php echo($page=="home")? "active": ""?>"><a href="index.php?page=home">Accueil</a></li>
                 <li class="<?php echo($page=="blog")? "active": ""?>"><a href="index.php?page=blog">Blog</a></li>
             </ul>
+            
         </div>
     </div>
 </nav>
