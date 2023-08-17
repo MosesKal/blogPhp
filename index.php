@@ -35,6 +35,10 @@
 
     <body>
 
+        <?php
+            include "body/topbar.php";
+        ?>
+
         <div class="container">
             <?php
                 include 'pages/'.$page.'.php';
