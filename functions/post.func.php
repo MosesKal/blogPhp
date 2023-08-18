@@ -15,11 +15,26 @@
         ON posts.writer = admins.email
         WHERE posts.id='{$_GET['id']}'
         "
-    );
+        );
 
-    $result = $req ->fetchObject();
+        $result = $req ->fetchObject();
 
-    return $result;
+        return $result;
 
+    }
+
+    function comment($name, $email, $comment){
+        global $db;
+
+        $c = [
+            'name' => $name,
+            'email' => $email,
+            'comment' => $comment,
+            'post_id' => $_GET["id"]
+        ];
+
+        $sql = "INSERT INTO comments(name, email, comment, post_id, date) VALUES(:name, :comment, :post_id, NOW())";
+        $req = $db->prepare($sql);
+        $req->execute($c);
     }
 ?>
